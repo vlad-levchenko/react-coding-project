@@ -13,11 +13,6 @@ import Photo from './Photo';
 import Pagination from './Pagination';
 
 const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
   gridList: {
     width: 500,
     height: 450,
@@ -29,8 +24,6 @@ const pageSize = 10;
 
 @connect((store) => {
   return {
-    users: store.users.users,
-    albums: store.albums.albums,
     photos: store.photos.photos,
   };
 })
@@ -83,7 +76,7 @@ export default class Photos extends React.Component {
     });
 
     return (
-      <div style={styles.root}>
+      <div>
         {!photo && <Pagination photos={photos} currentPage={currentPage} pageSize={pageSize} onNavigateToPage={this.onNavigateToPage.bind(this)} />}
         {!photo &&
           <GridList

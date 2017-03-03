@@ -8,7 +8,7 @@ export default class Photo extends React.Component {
   render() {
     const { photo, onPhotoPreviewClosed } = this.props;
 
-    return (<Card style={{width: '600px', height: '600px'}}>
+    return (<Card style={{width: '400px', height: '400px'}}>
       <CardMedia overlay={<CardTitle title={photo.title} />} >
         <img src={photo.url} />
       </CardMedia>

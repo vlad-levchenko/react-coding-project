@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import Layout from './components/Layout'
 import Users from './components/Users'
@@ -18,20 +18,14 @@ ReactDOM.render(
       <Router history={browserHistory}>
 
         <Route path='/' component={Layout}>
-
+          
           <Route path='users' component={Users} />
-          <IndexRoute component={Users}></IndexRoute>
-          <Route path='/user/albums/:userId' component={Albums} />
-          <Route path='/user/albums/album/:albumId' component={Photos} />
-          <Route path='albums' component={Albums} />
-          <Route path='photos' component={Photos} />
+          <Route path='user/albums/:userId' component={Albums} />
+          <Route path='user/albums/album/:albumId' component={Photos} />
+          <IndexRoute component={Users} />
 
         </Route>
-          < Route path = 'users'
-          component = {
-            Users
-          }
-          />
+
       </Router>  
     </Provider>
   </MuiThemeProvider>

@@ -8,9 +8,7 @@ import { fetchUsers } from '../actions/usersActions';
 
 @connect((store) => {
   return {
-    users: store.users.users,
-    albums: store.albums.albums,
-    photos: store.photos.photos,
+    users: store.users.users
   };
 })
   
@@ -23,9 +21,6 @@ export default class Albums extends React.Component {
   render() {
     const { users } = this.props;
 
-    if (!users) {
-      return null;
-    }
     const mappedElements = users.map(user => {
       return (
         <ListItem key={user.id}>

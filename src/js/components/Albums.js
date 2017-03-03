@@ -8,9 +8,7 @@ import { fetchAlbumByUserId } from '../actions/albumsActions'
 
 @connect((store) => {
   return {
-    users: store.users.users,
     albums: store.albums.albums,
-    photos: store.photos.photos,
   };
 })
   
