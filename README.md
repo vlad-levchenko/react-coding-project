@@ -9,3 +9,5 @@
     $ npm install or yarn install
     $ npm run dev or yard dev
 
+###You can see site at:
+    http://localhost:8080

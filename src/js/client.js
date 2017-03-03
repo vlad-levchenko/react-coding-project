@@ -27,7 +27,11 @@ ReactDOM.render(
           <Route path='photos' component={Photos} />
 
         </Route>
-
+          < Route path = 'users'
+          component = {
+            Users
+          }
+          />
       </Router>  
     </Provider>
   </MuiThemeProvider>
